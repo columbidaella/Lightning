@@ -1,3 +1,5 @@
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 void setup()
 {
   size(500,500);
