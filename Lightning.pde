@@ -1,5 +1,3 @@
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 void setup()
 {
   size(500,500);
@@ -34,7 +32,7 @@ void draw()
   }
 }
 void mousePressed(){
-  //if(overCircle(450,250,100))
+ if(overCircle(450,250,100)){
   looping = !looping;
   noStroke();
   fill(#B39E88);
@@ -47,15 +45,16 @@ void mousePressed(){
   noStroke();
   treasureChest();
 }
-//boolean overCircle(int x, int y, int diameter) {
-  //float disX = x - mouseX;
- // float disY = y - mouseY;
-  //if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
-    //return true;
-  //} else {
-   // return false;
- // }
-//}
+}
+boolean overCircle(int x, int y, int diameter) {
+  float disX = x - mouseX;
+  float disY = y - mouseY;
+  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 void treasureChest()
 {
   fill(#683F25);
